@@ -31,7 +31,6 @@ const config = {
       },
     },
   },
-  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
   presets: [
     [
       'classic',
@@ -114,9 +113,13 @@ const config = {
         ],
         copyright: `Copyright © ${new Date().getFullYear()} Rooch Network. Built with Docusaurus.`,
       },
+      colorMode: {
+        respectPrefersColorScheme: false,
+        defaultMode: 'light',
+        disableSwitch: true,
+      },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: require('./themes/livekit'),
       },
     }),
 };
